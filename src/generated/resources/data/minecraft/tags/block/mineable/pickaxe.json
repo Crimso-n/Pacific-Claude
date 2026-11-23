@@ -1,0 +1,11 @@
+{
+  "values": [
+    "shatterdome:jaeger_controller",
+    "shatterdome:limb_joint",
+    "shatterdome:conn_pod",
+    "shatterdome:weapon_mount",
+    "shatterdome:jaeger_alloy_plating",
+    "shatterdome:reactor_core",
+    "shatterdome:plasma_cannon"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#dark"
+        },
+        "east": {
+          "texture": "#dark"
+        },
+        "north": {
+          "texture": "#dark"
+        },
+        "south": {
+          "texture": "#dark"
+        },
+        "up": {
+          "texture": "#dark"
+        },
+        "west": {
+          "texture": "#dark"
+        }
+      },
+      "from": [
+        1,
+        3,
+        1
+      ],
+      "to": [
+        15,
+        8,
+        15
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#orange"
+        },
+        "east": {
+          "texture": "#orange"
+        },
+        "north": {
+          "texture": "#orange"
+        },
+        "south": {
+          "texture": "#orange"
+        },
+        "up": {
+          "texture": "#orange"
+        },
+        "west": {
+          "texture": "#orange"
+        }
+      },
+      "from": [
+        0,
+        8,
+        0
+      ],
+      "to": [
+        16,
+        10,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#gun"
+        },
+        "east": {
+          "texture": "#gun"
+        },
+        "north": {
+          "texture": "#gun"
+        },
+        "south": {
+          "texture": "#gun"
+        },
+        "up": {
+          "texture": "#gun"
+        },
+        "west": {
+          "texture": "#gun"
+        }
+      },
+      "from": [
+        3.5,
+        10,
+        3.5
+      ],
+      "to": [
+        12.5,
+        12,
+        12.5
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#hazard"
+        },
+        "east": {
+          "texture": "#hazard"
+        },
+        "north": {
+          "texture": "#hazard"
+        },
+        "south": {
+          "texture": "#hazard"
+        },
+        "up": {
+          "texture": "#hazard"
+        },
+        "west": {
+          "texture": "#hazard"
+        }
+      },
+      "from": [
+        2.5,
+        12,
+        2.5
+      ],
+      "to": [
+        13.5,
+        13,
+        13.5
+      ]
+    }
+  ],
+  "textures": {
+    "amber": "shatterdome:block/jaeger_amber_glass",
+    "dark": "shatterdome:block/jaeger_plating_dark",
+    "glow": "shatterdome:block/jaeger_glow",
+    "gun": "shatterdome:block/jaeger_gunmetal",
+    "hazard": "shatterdome:block/jaeger_hazard",
+    "orange": "shatterdome:block/jaeger_trim_orange",
+    "particle": "shatterdome:block/jaeger_gunmetal",
+    "plating": "shatterdome:block/jaeger_plating"
+  }
+}

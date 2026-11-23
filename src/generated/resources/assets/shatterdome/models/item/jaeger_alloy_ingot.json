@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shatterdome:item/jaeger_alloy_ingot"
+  }
+}

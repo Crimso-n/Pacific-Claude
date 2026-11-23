@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "shatterdome:block/jaeger_controller"
+    }
+  }
+}

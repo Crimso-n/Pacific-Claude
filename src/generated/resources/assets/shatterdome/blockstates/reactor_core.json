@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "shatterdome:block/reactor_core",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "shatterdome:block/reactor_core"
+    },
+    "axis=z": {
+      "model": "shatterdome:block/reactor_core",
+      "x": 90,
+      "y": 180
+    }
+  }
+}

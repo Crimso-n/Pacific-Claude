@@ -1,0 +1,143 @@
+{
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#plating"
+        },
+        "east": {
+          "texture": "#plating"
+        },
+        "north": {
+          "texture": "#plating"
+        },
+        "south": {
+          "texture": "#plating"
+        },
+        "up": {
+          "texture": "#plating"
+        },
+        "west": {
+          "texture": "#plating"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        5,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#amber"
+        },
+        "east": {
+          "texture": "#amber"
+        },
+        "north": {
+          "texture": "#amber"
+        },
+        "south": {
+          "texture": "#amber"
+        },
+        "up": {
+          "texture": "#amber"
+        },
+        "west": {
+          "texture": "#amber"
+        }
+      },
+      "from": [
+        1,
+        5,
+        1
+      ],
+      "to": [
+        15,
+        10,
+        15
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#orange"
+        },
+        "east": {
+          "texture": "#orange"
+        },
+        "north": {
+          "texture": "#orange"
+        },
+        "south": {
+          "texture": "#orange"
+        },
+        "up": {
+          "texture": "#orange"
+        },
+        "west": {
+          "texture": "#orange"
+        }
+      },
+      "from": [
+        0,
+        10,
+        0
+      ],
+      "to": [
+        16,
+        14,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#dark"
+        },
+        "east": {
+          "texture": "#dark"
+        },
+        "north": {
+          "texture": "#dark"
+        },
+        "south": {
+          "texture": "#dark"
+        },
+        "up": {
+          "texture": "#dark"
+        },
+        "west": {
+          "texture": "#dark"
+        }
+      },
+      "from": [
+        7,
+        14,
+        7
+      ],
+      "to": [
+        9,
+        16,
+        9
+      ]
+    }
+  ],
+  "textures": {
+    "amber": "shatterdome:block/jaeger_amber_glass",
+    "dark": "shatterdome:block/jaeger_plating_dark",
+    "glow": "shatterdome:block/jaeger_glow",
+    "gun": "shatterdome:block/jaeger_gunmetal",
+    "hazard": "shatterdome:block/jaeger_hazard",
+    "orange": "shatterdome:block/jaeger_trim_orange",
+    "particle": "shatterdome:block/jaeger_plating",
+    "plating": "shatterdome:block/jaeger_plating"
+  }
+}

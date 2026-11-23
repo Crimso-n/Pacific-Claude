@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "shatterdome:block/plasma_cannon",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "shatterdome:block/plasma_cannon"
+    },
+    "axis=z": {
+      "model": "shatterdome:block/plasma_cannon",
+      "x": 90,
+      "y": 180
+    }
+  }
+}

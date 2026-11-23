@@ -1,0 +1,39 @@
+package com.shatterdome.content.reactor;
+
+import com.shatterdome.AllBlockEntityTypes;
+import com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock;
+import com.simibubi.create.foundation.block.IBE;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+
+/** Jaeger reactor core. Phase 1: constant stress source. Fuel/heat/cooling come later. */
+public class ReactorCoreBlock extends RotatedPillarKineticBlock implements IBE<ReactorCoreBlockEntity> {
+
+    public ReactorCoreBlock(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public boolean hasShaftTowards(LevelReader world, BlockPos pos, BlockState state, Direction face) {
+        return face.getAxis() == state.getValue(AXIS);
+    }
+
+    @Override
+    public Direction.Axis getRotationAxis(BlockState state) {
+        return state.getValue(AXIS);
+    }
+
+    @Override
+    public Class<ReactorCoreBlockEntity> getBlockEntityClass() {
+        return ReactorCoreBlockEntity.class;
+    }
+
+    @Override
+    public BlockEntityType<? extends ReactorCoreBlockEntity> getBlockEntityType() {
+        return AllBlockEntityTypes.REACTOR_CORE.get();
+    }
+}
