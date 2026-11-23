@@ -2,7 +2,6 @@ package com.shatterdome;
 
 import com.tterrag.registrate.util.entry.FluidEntry;
 
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 
 public class AllFluids {
@@ -19,7 +18,7 @@ public class AllFluids {
             .block()
             .build()
             .bucket()
-            .model((c, p) -> p.generated(c::getEntry, ResourceLocation.withDefaultNamespace("item/water_bucket")))
+            .model((c, p) -> p.generated(c::getEntry, Shatterdome.asResource("item/kaiju_blue_bucket")))
             .build()
             .register();
 

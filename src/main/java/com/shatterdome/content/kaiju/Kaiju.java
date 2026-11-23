@@ -14,8 +14,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 /**
- * Placeholder Kaiju. Phase 1: a huge, tanky melee mob (zombie model scaled up with the
- * SCALE attribute). Ranged attack, block breaking and the real model come later.
+ * Placeholder Kaiju. Phase 1: a huge, tanky melee mob (custom KaijuModel scaled up with the
+ * SCALE attribute). Ranged attack and block breaking come later.
  */
 public class Kaiju extends Monster {
 
