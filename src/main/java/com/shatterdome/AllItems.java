@@ -1,5 +1,6 @@
 package com.shatterdome;
 
+import com.shatterdome.content.link.LinkWandItem;
 import com.tterrag.registrate.util.entry.ItemEntry;
 
 import net.minecraft.resources.ResourceLocation;
@@ -17,6 +18,12 @@ public class AllItems {
     public static final ItemEntry<Item> KAIJU_BLUE_VIAL = Shatterdome.REGISTRATE
             .item("kaiju_blue_vial", Item::new)
             .model((c, p) -> p.generated(c::getEntry, Shatterdome.asResource("item/kaiju_blue_vial")))
+            .register();
+
+    /** Click a Conn Pod, then a Limb Joint, to link them. Shift-click a Limb Joint to unlink. */
+    public static final ItemEntry<LinkWandItem> LINK_WAND = Shatterdome.REGISTRATE
+            .item("link_wand", LinkWandItem::new)
+            .model((c, p) -> p.generated(c::getEntry, Shatterdome.asResource("item/link_wand")))
             .register();
 
     public static final ItemEntry<DeferredSpawnEggItem> KAIJU_SPAWN_EGG = Shatterdome.REGISTRATE

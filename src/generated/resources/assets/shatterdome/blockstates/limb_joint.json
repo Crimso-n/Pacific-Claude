@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "shatterdome:block/limb_joint",
+      "y": 90
+    },
+    "facing=north": {
       "model": "shatterdome:block/limb_joint"
+    },
+    "facing=south": {
+      "model": "shatterdome:block/limb_joint",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shatterdome:block/limb_joint",
+      "y": 270
     }
   }
 }

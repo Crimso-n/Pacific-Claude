@@ -1,0 +1,32 @@
+1) In AllBlocks.java add this import (next to the other content imports):
+
+    import com.shatterdome.content.conn.ConnPodBlock;
+
+2) In AllBlocks.java replace the existing CONN_POD definition:
+
+    /** Pilot cockpit. Phase 2: seat + control handling. */
+    public static final BlockEntry<Block> CONN_POD =
+            shaped("conn_pod", () -> Blocks.IRON_BLOCK, ShatterdomeModels::connPod);
+
+with:
+
+    /** Pilot cockpit: one-seat Create seat block, horizontal facing, captures input client-side. */
+    public static final BlockEntry<ConnPodBlock> CONN_POD = Shatterdome.REGISTRATE
+            .block("conn_pod", ConnPodBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(p -> p.noOcclusion())
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .blockstate((ctx, prov) -> {
+                BlockModelBuilder model = prov.models().withExistingParent(ctx.getName(), vanilla("block/block"));
+                ShatterdomeModels.connPod(model);
+                prov.horizontalBlock(ctx.get(), model);
+            })
+            .simpleItem()
+            .register();
+
+3) In Shatterdome.java, inside the constructor (after REGISTRATE.setCreativeTab(...)), add the key names:
+
+    REGISTRATE.addRawLang("key.categories.shatterdome", "Create: Shatterdome");
+    REGISTRATE.addRawLang("key.shatterdome.limb_mode", "Conn Pod: Limb Mode (hold)");
+
+4) Run ./gradlew runData, then ./gradlew runClient.

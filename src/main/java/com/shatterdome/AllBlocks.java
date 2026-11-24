@@ -4,6 +4,8 @@ import static com.shatterdome.content.util.ShatterdomeModels.vanilla;
 
 import java.util.function.Consumer;
 
+import com.shatterdome.content.conn.ConnPodBlock;
+import com.shatterdome.content.limb.LimbJointBlock;
 import com.shatterdome.content.reactor.ReactorCoreBlock;
 import com.shatterdome.content.util.ShatterdomeModels;
 import com.shatterdome.content.weapon.PlasmaCannonBlock;
@@ -25,13 +27,33 @@ public class AllBlocks {
     public static final BlockEntry<Block> JAEGER_CONTROLLER =
             shaped("jaeger_controller", () -> Blocks.OBSIDIAN, ShatterdomeModels::controller);
 
-    /** Chainable limb joint (hip/knee/ankle). Phase 2: inverse kinematics. */
-    public static final BlockEntry<Block> LIMB_JOINT =
-            shaped("limb_joint", () -> Blocks.POLISHED_BLACKSTONE, ShatterdomeModels::limbJoint);
+    /** Limb hip: 3-bone IK limb drawn by LimbJointRenderer, linked to a Conn Pod with the Link Wand. */
+    public static final BlockEntry<LimbJointBlock> LIMB_JOINT = Shatterdome.REGISTRATE
+            .block("limb_joint", LimbJointBlock::new)
+            .initialProperties(() -> Blocks.POLISHED_BLACKSTONE)
+            .properties(p -> p.noOcclusion())
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .blockstate((ctx, prov) -> {
+                BlockModelBuilder model = prov.models().withExistingParent(ctx.getName(), vanilla("block/block"));
+                ShatterdomeModels.limbJoint(model);
+                prov.horizontalBlock(ctx.get(), model);
+            })
+            .simpleItem()
+            .register();
 
-    /** Pilot cockpit. Phase 2: seat + control handling. */
-    public static final BlockEntry<Block> CONN_POD =
-            shaped("conn_pod", () -> Blocks.IRON_BLOCK, ShatterdomeModels::connPod);
+    /** Pilot cockpit: one-seat Create seat block, horizontal facing, captures input client-side. */
+    public static final BlockEntry<ConnPodBlock> CONN_POD = Shatterdome.REGISTRATE
+            .block("conn_pod", ConnPodBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(p -> p.noOcclusion())
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .blockstate((ctx, prov) -> {
+                BlockModelBuilder model = prov.models().withExistingParent(ctx.getName(), vanilla("block/block"));
+                ShatterdomeModels.connPod(model);
+                prov.horizontalBlock(ctx.get(), model);
+            })
+            .simpleItem()
+            .register();
 
     /** Weapon attachment point for the plasma cannon. */
     public static final BlockEntry<Block> WEAPON_MOUNT =

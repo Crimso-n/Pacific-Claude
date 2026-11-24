@@ -1,5 +1,7 @@
 package com.shatterdome;
 
+import com.shatterdome.client.LimbJointRenderer;
+import com.shatterdome.content.limb.LimbJointBlockEntity;
 import com.shatterdome.content.reactor.ReactorCoreBlockEntity;
 import com.shatterdome.content.util.ShatterdomeShaftRenderer;
 import com.shatterdome.content.weapon.PlasmaCannonBlockEntity;
@@ -20,6 +22,12 @@ public class AllBlockEntityTypes {
             .visual(() -> ShaftVisual::new)
             .validBlock(AllBlocks.PLASMA_CANNON)
             .renderer(() -> ShatterdomeShaftRenderer::new)
+            .register();
+
+    public static final BlockEntityEntry<LimbJointBlockEntity> LIMB_JOINT = Shatterdome.REGISTRATE
+            .blockEntity("limb_joint", LimbJointBlockEntity::new)
+            .validBlock(AllBlocks.LIMB_JOINT)
+            .renderer(() -> LimbJointRenderer::new)
             .register();
 
     public static void register() {

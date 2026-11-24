@@ -13,6 +13,9 @@
   "item.shatterdome.kaiju_blue_bucket": "Kaiju Blue Bucket",
   "item.shatterdome.kaiju_blue_vial": "Kaiju Blue Vial",
   "item.shatterdome.kaiju_spawn_egg": "Kaiju Spawn Egg",
+  "item.shatterdome.link_wand": "Link Wand",
   "itemGroup.shatterdome": "Create: Shatterdome",
-  "itemGroup.shatterdome.main_tab": "Main Tab"
+  "itemGroup.shatterdome.main_tab": "Main Tab",
+  "key.categories.shatterdome": "Create: Shatterdome",
+  "key.shatterdome.limb_mode": "Conn Pod: Limb Mode (hold)"
 }

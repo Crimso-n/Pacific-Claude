@@ -32,6 +32,9 @@ public class Shatterdome {
         AllCreativeModeTabs.register();
         REGISTRATE.setCreativeTab(AllCreativeModeTabs.MAIN_TAB);
 
+        REGISTRATE.addRawLang("key.categories.shatterdome", "Create: Shatterdome");
+        REGISTRATE.addRawLang("key.shatterdome.limb_mode", "Conn Pod: Limb Mode (hold)");
+
         AllEntityTypes.register();
         AllItems.register();
         AllFluids.register();
